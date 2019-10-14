@@ -27,19 +27,26 @@ describe('HeroesComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have as name "Dr Nice"`, () => {
+  /*it(`should have as name "Dr Nice"`, () => {
     const fixture = TestBed.createComponent(HeroesComponent);
     const heroComponent = fixture.debugElement.componentInstance;
     expect(heroComponent.heroes[0].name).toEqual('Dr Nice');
     expect(heroComponent.heroes[0].id).toEqual(11);
     expect(heroComponent.selectedHero).not.toBeTruthy();
-  });
+  });*/
 
   it('should accept a onSelect() method', () => {
     const fixture = TestBed.createComponent(HeroesComponent);
     const heroComponent = fixture.debugElement.componentInstance;
     heroComponent.onSelect(HEROES[0]);
     expect(heroComponent.selectedHero).toEqual(HEROES[0]);
+  });
+
+  it('should accept a getHeroes() method', () => {
+    const fixture = TestBed.createComponent(HeroesComponent);
+    const heroComponent = fixture.debugElement.componentInstance;
+    heroComponent.getHeroes();
+    expect(heroComponent.heroes).toEqual(HEROES);
   })
 
 });
