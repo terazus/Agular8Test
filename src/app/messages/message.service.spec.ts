@@ -10,7 +10,7 @@ describe('MessageService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should be add messages "Hello World"', () => {
+  it('should add message "Hello World"', () => {
     const service: MessageService = TestBed.get(MessageService);
     service.add("Hello World");
     expect(service.messages[0]).toEqual("Hello World")
