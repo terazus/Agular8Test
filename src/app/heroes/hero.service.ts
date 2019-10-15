@@ -13,6 +13,7 @@ import { MessageService } from '../messages/message.service';
 export class HeroService {
 
   getHeroes(): Observable<Hero[]> {
+    this.messageService.clear();
     this.messageService.add('HeroService: fetched heroes');
     for (let hero in HEROES){
       this.messageService.add(HEROES[hero].name)

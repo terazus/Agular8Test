@@ -1,4 +1,11 @@
 <h1>{{title}} app is running!</h1>
 
-<app-heroes></app-heroes>
+<nav>
+  <a class="nav-link" routerLink="/">Home</a>
+  <a class="nav-link" routerLink="/heroes">Heroes</a>
+  <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+</nav>
+
+
+<router-outlet></router-outlet>
 <app-messages></app-messages>
